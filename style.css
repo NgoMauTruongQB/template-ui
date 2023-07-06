@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif, helvetica;
+    background-color: #f8f8f8;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 9999;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-left: 3px solid;
+    border-radius: 3px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.03);
+    padding: 20px 0;
+    margin-top: 10px;
+    width: 400px;
+    transition: all linear 0.3;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast__icon {
+    font-size: 20px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 14px;
+    color: #888;
+    margin-top: 6px;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgb(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.toast--success {
+    border-color: #47d864;
+}
+
+.toast--success .toast__icon{
+    color: #47d864;
+}
+
+.toast--infor {
+    border-color: #2f86eb;
+}
+
+.toast--infor .toast__icon{
+    color: #2f86eb;
+}
+
+.toast--warning {
+    border-color: #ffc021;
+}
+
+.toast--warning .toast__icon{
+    color: #ffc021;
+}
+
+.toast--error {
+    border-color: #ff623d;
+}
+
+.toast--error .toast__icon{
+    color: #ff623d;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    border: none;
+    border-radius: 23px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn--success {
+    background-color: #47d864;
+}
+
+.btn--error {
+    background-color: #ff623d;
+}
+
